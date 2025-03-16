@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Create Note</h2>
+  <form action="/api/notes" method="post">
+    <div class="form-group">
+      <label>Title</label>
+      <input class="form-control" type="text" name="title" required>
+    </div>
+    <div class="form-group">
+      <label>Content</label>
+      <textarea class="form-control" name="content" rows="6" required></textarea>
+    </div>
+    <button class="btn btn-success" type="submit">Create</button>
+  </form>
+{% endblock %}

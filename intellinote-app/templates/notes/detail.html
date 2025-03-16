@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>{{ note.title }}</h2>
+  <p>{{ note.content }}</p>
+  {% if note.summary %}
+    <h5>Summary (AI):</h5>
+    <p>{{ note.summary }}</p>
+  {% endif %}
+  <hr>
+  <a class="btn btn-primary" href="/api/notes/{{ note.note_id }}/edit">Edit</a>
+  <form action="/api/notes/{{ note.note_id }}/delete" method="post" style="display:inline;">
+    <button class="btn btn-danger" type="submit">Delete</button>
+  </form>
+  <form action="/api/notes/{{ note.note_id }}/chatgpt-summarize" method="post" style="display:inline;">
+    <button class="btn btn-info" type="submit">Summarize with ChatGPT</button>
+  </form>
+{% endblock %}

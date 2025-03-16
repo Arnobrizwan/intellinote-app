@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+asyncpg
+jinja2
+python-multipart
+passlib[bcrypt]
+pyjwt
+requests
+beautifulsoup4
+transformers
+torch
+python-dotenv
+openai
+sqlalchemy[asyncio]
+python-dotenv
